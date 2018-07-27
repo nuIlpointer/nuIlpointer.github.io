@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <meta name="Description" content="nuilClient Twitter Client">
+    <meta name="theme-color" content="#82b1ff"/>
     <style type="text/css">
     .Site {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-.Site-content {
-  flex: 1;
-}
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      position:relative; top:1px;
+      height:auto
+    }
+    .Site-content {
+      flex: 1;
+    }
     </style>
     <meta charset="UTF-8"/>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="../css/more.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="../res/more.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>nuilClient - ぬいるぽいんた</title>
+    <title>nuilClient</title>
   </head>
 
-  <body class="grey darken-3 Site">
+  <body class="transparent Site">
     <!--Materialize JavaScriptの読み込み-->
-    <script type="text/javascript" src="../js/materialize.min.js"></script>
-    <script type="text/javascript" src="../js/more.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../res/more.js"></script>
     <header>
+      <!--ここヘッダーね！いいかわかったか？-->
       <div class="navbar-fixed">
-        <nav class="nav-extended col grey darken-4">
+        <nav class="indigo darken-4">
           <div class="nav-wrapper">
-            <a href="#" class="h1 brand-logo" href="https://nuilpointer.github.io">　nu"I"lpointer</a>
-
+            <a href="#" class="left h1 brand-logo"><img width="160" src="../res/nuilclient_icon.png" style="margin:8px"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li class="active"><a href="#title">名前</a></li>
+              <li><a href="#about">概要</a></li>
+              <li><a href="#usage">使用方法</a></li>
+            </ul>
           </div>
-          <div class="col grey darken-4 nav-content">
-              <ul class="tabs tabs-transparent">
-                <li class="tab"><a href="#title">概要</a></li>
-                <li class="tab"><a href="#about">プログラムについて</a></li>
-                <li class="tab"><a href="#usage">使用方法</a></li>
-              </ul>
-            </div>
         </nav>
       </div>
+      <!--ここまでヘッダー-->
     </header>
     <!--ここから内容-->
     <main class="Site-content">
       <br>
       <br>
-      <div class="container white-text center-align" id="title">
+      <div class="container center-align" id="title">
         <br>
         <br>
-        <h4>nuilClient</h4>(alpha)<br>
+        <p><h4>nuilClient</h4></p>
+        <p>(alpha)<p>
         <h6>NodeJSで構築されたTwitterのCUIクライアント</h6><br>
         <br>
         NodeJSで構築された「ツイ廃」向けCUIクライアントです。<br>
@@ -61,7 +65,7 @@
         ダウンロードは<a href="nuIlClient.zip">こちら</a>
 
       </div>
-      <div class="container white-text center-align" id="about">
+      <div class="container center-align" id="about">
       <br>
       <br>
       <h4>プログラムについて</h4><br>
@@ -74,16 +78,30 @@
       また、「リツイート」と「いいね」を同じツイートに同時に行う機能も実装。<br>
       高速なレスポンスと操作性によって、あなたの快適なツイ廃ライフを実現します。
       </div>
-      <div class="container white-text center-align" id="usage">
-      <br>
-      <br>
-      <h4>操作方法</h4><br>
-      <h6>準備中です。しばらくお待ちください。
+      <div class="container center-align" id="usage">
+        <br>
+        <br>
+        <h4>操作方法</h4><br>
+        <p><h5>/fw</h5></p>
+        <p>フォロワー一覧を更新します。</p>
+        <p><h5>/r</h5></p>
+        <p>リツイートします</p>
+        <p><h5>/f</h5></p>
+        <p>ふぁぼします</p>
+        <p><h5>/m</h5></p>
+        <p>リツイートとふぁぼを同時に行います</p>
+        <p><h5>/exit</h5></p>
+        <p>終了します</p>
+        <p><h5>/clear</h5></p>
+        <p>要注意です。Windows10環境で動作しない可能性があります。</p>
+        <p>クライアントの画面を初期化します。</p>
+      </div>
     </main>
-    <footer class="col grey darken-4 page-footer">
+
+    <footer class="col indigo darken-4 page-footer">
       <div class="container">
         <div class="row">
-          <div class="col grey darken-4 s12">
+          <div class="">
             <h5 class="white-text">外部リンク</h5>
               <ul>
                 <li><a class="grey-text text-lighten-3" href="https://nuilpointer.github.io">トップ</a></li>
