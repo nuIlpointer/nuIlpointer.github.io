@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta name="Description" content="ぬいるぽいんた">
-    <meta name="theme-color" content="#212121"/>
+    <meta name="theme-color" content="grey darken-4"/>
     <style type="text/css">
     .Site {
       display: flex;
@@ -28,23 +28,12 @@
     <!--Materialize JavaScriptの読み込み-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="./res/more.js"></script>
+
+    <!--header読み込み-->
     <header>
-      <div class="navbar-fixed">
-        <nav class="nav-extended col grey darken-4">
-          <div class="nav-wrapper">
-            <a href="#" class="h1 brand-logo" href="https://nuilpointer.github.io"><img width="200" src="res/icon_inv.png" style="margin:10px"></a>
-          </div>
-          <div class="col grey darken-4 nav-content">
-              <ul class="tabs tabs-transparent">
-                <li class="tab"><a href="#overview">概要</a></li>
-                <li class="tab"><a href="#about">誰?</a></li>
-                <li class="tab"><a href="#name">名前</a></li>
-                <li class="tab"><a href="#project">成果物</a></li>
-              </ul>
-            </div>
-        </nav>
-      </div>
+      <div rel="text/html" id="header" class="navbar-fixed">
     </header>
+
     <!--ここから内容-->
     <main class="Site-content">
       <div class="container white-text" id="overview">
@@ -101,27 +90,6 @@
       <div class="container white-text" id="">
       </div>
     </main>
-    <footer class="col grey darken-4 page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col grey darken-4 s12">
-            <h5 class="white-text">外部リンク</h5>
-              <ul>
-                <li><a class="grey-text text-lighten-3" href="https://nuilpointer.github.io">トップ</a></li>
-                <li><a class="grey-text text-lighten-3" href="https://twitter.com/nuIlpointer">Twitter</a></li>
-                <li><a class="grey-text text-lighten-3" href="https://www.youtube.com/channel/UC3P2J6vu4T7q6LmLznIUgwg">YouTube</a></li>
-                <li><a class="grey-text text-lighten-3" href="http://www.nicovideo.jp/user/45885932">niconico</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="container">
-            (C) 2018 nuilpointer All rights reserved.
-            <a class="white-text right" href="https://materializecss.com"><u>Powered by Materialize CSS.</u></a>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <footer rel="text/html" id="footer"></footrer>
   </body>
 </html>

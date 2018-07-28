@@ -29,22 +29,9 @@
     <!--Materialize JavaScriptの読み込み-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="../res/more.js"></script>
-    <header>
-      <!--ここヘッダーね！いいかわかったか？-->
-      <div class="navbar-fixed">
-        <nav class="indigo darken-4">
-          <div class="nav-wrapper">
-            <a href="#" class="left h1 brand-logo"><img width="160" src="../res/nuilclient_icon.png" style="margin:8px"></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li class="active"><a href="#title">名前</a></li>
-              <li><a href="#about">概要</a></li>
-              <li><a href="#usage">使用方法</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-      <!--ここまでヘッダー-->
-    </header>
+    <!--header読み込み-->
+    <header rel="text/html" id="header" class="navbar-fixed"></header>
+
     <!--ここから内容-->
     <main class="Site-content">
       <br>
@@ -98,27 +85,6 @@
       </div>
     </main>
 
-    <footer class="col indigo darken-4 page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="">
-            <h5 class="white-text">外部リンク</h5>
-              <ul>
-                <li><a class="grey-text text-lighten-3" href="https://nuilpointer.github.io">トップ</a></li>
-                <li><a class="grey-text text-lighten-3" href="https://twitter.com/nuIlpointer">Twitter</a></li>
-                <li><a class="grey-text text-lighten-3" href="https://www.youtube.com/channel/UC3P2J6vu4T7q6LmLznIUgwg">YouTube</a></li>
-                <li><a class="grey-text text-lighten-3" href="http://www.nicovideo.jp/user/45885932">niconico</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="container">
-            (C) 2018 nuilpointer All rights reserved.
-            <a class="white-text right" href="https://materializecss.com"><u>Powered by Materialize CSS.</u></a>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <footer rel="text/html" id="footer"></footer>
   </body>
 </html>
