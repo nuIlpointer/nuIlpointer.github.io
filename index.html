@@ -8,86 +8,219 @@
       display: flex;
       min-height: 100vh;
       flex-direction: column;
-      position:relative; top:1px;
+      position:relative; top;
       height:auto
     }
     .Site-content {
       flex: 1;
     }
+    .mySlides {
+      display: none;
+      object-fit: cover;
+    }
+    .headpic {
+      object-fit: cover;
+    }
+    .nav-fixed {
+      z-index: 1000;
+    }
     </style>
     <meta charset="UTF-8"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link type="text/css" rel="stylesheet" href="./res/more.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Top - ぬいるぽいんた</title>
   </head>
 
-  <body class="grey darken-3 Site">
+  <body class="white Site">
     <!--Materialize JavaScriptの読み込み-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="./res/more.js"></script>
 
     <!--header読み込み-->
     <header>
-      <div rel="text/html" id="header" class="navbar-fixed">
+      <nav>
+        <div class="navbar-fixed">
+          <div class="nav-wrapper">
+            <a class="h1 brand-logo" href="https://nuilpointer.github.io"><img width="200" src="res/icon_inv.png" style="margin:10px" alt="nuilpointer"></img></a>
+          </div>
+        </div>
+      </nav>
+      <section>
+
+      </section>
+      <!-- script -->
+      <script>
+        $(document).ready(function() {
+          $(window).scroll(function() {
+            if($(window).scrollTop()>580) {
+              $('nav').addClass('grey darken-3');
+            } else {
+              $('nav').removeClass('grey darken-3');
+            }
+          });
+        });
+      </script>
+      <!-- style -->
+      <style>
+        nav{
+          position: fixed;
+          background: rgba(0, 0, 0, 0.2);
+          padding:0px 20px;
+        }
+
+        section{
+          background-image: url(Head.jpg);
+          background-size: cover;
+          background-position: center;
+          width: 100%;
+          height: 601px;
+        }
+
+        .box{
+          margin-top: 20px;
+          height: 1000px;
+        }
+
+        nav li a:hover{
+          background: indigo;
+        }
+
+      </style>
     </header>
 
     <!--ここから内容-->
     <main class="Site-content">
-      <div class="container white-text" id="overview">
-        <br>
-        <br>
-        <p><h4>概要</h4></p>
-        <p>なんか色々やってるぬいるぽいんたのホームページ作成練習がてらの個人ページです。</p>
-        <p>暇なときに更新したりプログラムを公開したりします。つってもプログラムが主軸ではなさそうですが...</p>
-        <p><a href="https://twitter.com/nuilpointer">ツイッター</a>ではツイ廃していますのでフォローするとTLが荒れますがしてくれると喜びます。</p>
-      </div>
-      <div class="container white-text" id="about">
-        <br>
-        <br>
-        <p><h4>どんなやつ?</h4></p>
-        <p><s>音MADからプログラムまでコンピュータを幅広く取り扱うことのできる人。</s>嘘。やってるけど全部微妙。</p>
-        <p>主にPC自作、鉄道、航空、ゲーム、機械類が好きなオタクです。</p>
-        <p>こういったWebページの作成、クソコラ生産など無駄なことを無駄に頑張ってやっている残念なネットユーザーです。</p>
-      </div>
-      <div class="container white-text" id="name">
-        <br>
-        <br>
-        <p><h4>名前について</h4></p>
-        <p>名前は「nuIlpointer(ぬいるぽいんた)」。</p>
-        <p>ll(L二つ)ではなくIl(IL)なので注意が必要。ぬるぽって読んだら怒るぞ。</p>
-      </div>
-      <div class="container white-text" id="project">
-        <br>
-        <br>
-        <p><h4>成果物</h4></p>
-        <p>いくら取り消し線を付けているとはいえ幅広いとか書いてるなら何か出来るんだろ！ということで以下にやったことに関して書いておきます。
 
-        <p><h5>自作PC</h5></p>
-        <p>自作PCはRyzenを使用したメインマシンを使用しています。</p>
-        <p>動画内で紹介しているノートPCは現在所有していませんし、GPUも無事980Tiに換装されHDDも変更されております。<s>動画更新がめんどくさいので更新していないわけでは決してありません決して</s>。</p>
-        <p><iframe width="560" height="315" src="https://www.youtube.com/embed/WabAvit4N-o?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+      <div class="row container col">
+        <div class="col s12">
+          <ul class="tabs">
+            <li class="tab col s3"><a class="active black-text" href="#about">概要</a></li>
+            <li class="tab col s3"><a href="#creations">作品</a></li>
+            <li class="tab col s3"><a href="#sns">SNS</a></li>
+            <li class="tab col s3"><a href="#devices">小ネタ(所有機材)</a></li>
+          </ul>
+        </div>
+        <style>
+        .tabs {
+          z-index: 1;
+        }
+        .tabs .tab a{
+          color: #757575;
+        } /*Black color to the text*/
 
-        <p><h5>音MAD</h5></p>
-        <p>作りたい作りたいと考えようやくReaperを知り作成し始めた作品。</p>
-        <p>なお肝心の中身は...アニメーションがない。手抜くなや</p>
-        <p><script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm33438134/script?w=640&h=360" title="Wind ZONE"></script><noscript><a href="http://www.nicovideo.jp/watch/sm33438134">Wind ZONE</a></noscript></p>
+        .tabs .tab a:hover {
+          background-color: #9e9e9e ;
+          color: #000000;
+        } /*Text color on hover*/
 
-        <p><h5>撮影</h5></p>
-        <p>鉄道とか撮影してます。</p>
-        <p>ただし鉄道に関しては383と373と371系がごっちゃになる始末、ちょっとおかしくなぁい?</p>
-        <p><iframe width="560" height="315" src="https://www.youtube.com/embed/mX2ie_jb2C8?rel=0" title="Youtube 動画" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+        .tabs .tab a.active {
+          background-color: #f5f5f5;
+          color: #000000;
+        } /*Background and text color when a tab is active*/
 
-        <p><h5>プログラム</h5></p>
-        <p>Bukkitプラグインの開発、配布を趣味がてらしています</p>
-        <p>これに関してはこのHPで配布します。</p>
-        <p>詳しくは</p>
-        <p><a class="waves-effect waves-light btn-large blue-grey lighten-4" href="https://nuilpointer.github.io/downloads"><i class="material-icons left blue-grey lighten-4">get_app</i>ダウンロード</a><p>
-        <p>また、Twitterクライアントの開発も行っております。詳しくは<a class="waves-effect waves-light btn blue-grey lighten-4" href="nuilClient/">こちら</a>
-      </div>
-      <div class="container white-text" id="">
+        .tabs .indicator {
+          background-color: #1a237e;
+        } /*Color of underline*/
+        </style>
+
+        <div class="col s12" id="about">
+          <br>
+          <br>
+          <p><h4>概要</h4></p>
+          <p>主に音MAD、クソコラ、ホームページの制作(このサイトみたいに)、ゲーム、鉄道、航空、コンピュータなど幅広い趣味を持っている人です。</p>
+          <p>Twitter上での活動がほとんどですが、たまにDiscordサーバー上に出現します。</p>
+          <p>結構下ネタを使います。注意が必要です。</p>
+          <p>鉄道、航空は写真撮影、音MADは音声など結構広く浅い微妙な感じですが、唯一深く入っているのがコンピュータです。</p>
+          <p>NodeJS、Javaなどを使用したプログラミング、ホームページ作成、コンピュータの構築や設定など、この分野は一般的な知識よりはるかに詳しい、と(自らでは)思っています。</p>
+          <p>その類の質問であればかなり答えることができますので是非Twitterなので絡んできてください。</p>
+        </div>
+
+        <div class="col s12" id="creations">
+          <br>
+          <br>
+          <p><h4>作品</h4></p>
+          <p>以下にやったことに関して書いておきます。
+
+          <p><h5>PC</h5></p>
+          <p>PCは現在Core i5-6200U搭載のノートPCを使用しています。</p>
+          <p>過去に使用していた自作PC(AMD Ryzen 7 1700搭載マシン)に関しての動画は以下からどうぞ。
+          <p>動画内で紹介しているノートPCは現在所有していませんし、GPUは980Tiに換装されHDDも変更されております。そもそも現在所有していない(Nintendo Switchと交換した。流石にやめよきゃよかった)です。</p>
+          <p><iframe width="560" height="315" src="https://www.youtube.com/embed/WabAvit4N-o?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+          <p>恐らくそろそろ新マシンの構築を行うはずなので乞うご期待。たぶん動画にします。</p>
+
+          <p><h5>音MAD</h5></p>
+          <p>作りたい作りたいと考えようやくReaperを知り作成し始めた作品。</p>
+          <p>なお肝心の中身は...アニメーションがない。手抜くなや</p>
+          <p><script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm33438134/script?w=640&h=360" title="Wind ZONE"></script><noscript><a href="http://www.nicovideo.jp/watch/sm33438134">Wind ZONE</a></noscript></p>
+          <p>と思ったら合作で動画をつけてくださる方がいらっしゃいました。感謝。</p>
+          <p><script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm34071101/script?w=640&h=360"></script><noscript><a href="https://www.nicovideo.jp/watch/sm34071101">Second AI (キズナアイ×Second Heaven)</a></noscript></p>
+
+          <p><h5>撮影</h5></p>
+          <p>鉄道とか風景を撮影してます。</p>
+          <p>静止画はEOS M10、動画はiPhone 6s、Xperia Z2、Xperia ZL2、AQUOS PHONE Xxを使用しています(すべて4K30FPS)。</p>
+          <p><iframe width="560" height="315" src="https://www.youtube.com/embed/mX2ie_jb2C8?rel=0" title="Youtube 動画" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+
+          <p><h5>プログラム</h5></p>
+          <p>Bukkitプラグインの開発、配布を趣味がてらしています</p>
+          <p>GitHub参照。ほんの少しだけ配布されてます。</p>
+          <p>詳しくは</p>
+          <p><a class="waves-effect waves-light btn-large blue-grey lighten-4" href="https://github.com/nuilpointer"><i class="material-icons left blue-grey lighten-4">get_app</i>GitHubへ</a><p>
+          <p>また、Twitterクライアントの開発も行っております。詳しくは<a class="waves-effect waves-light btn blue-grey lighten-4" href="nuilClient/">こちら</a>
+        </div>
+
+        <div id="sns" class="col s12">
+          <p>Twitter</p>
+          <p><a href="https://twitter.com/nuilpointer?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @nuilpointer</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+          <p>Youtube</p>
+          <a href="https://www.youtube.com/channel/UC3P2J6vu4T7q6LmLznIUgwg" class="waves-effect waves-light btn red accent-4"><i class="material-icons left">play_arrow</i>Youtube</a>
+
+        </div>
+        <div id="devices" class="col s12">
+          <p><h4>PC</h4></p>
+          <p><h5>メインマシン</h5></p>
+          <p><h5>残念ながら近々サーバー機になる模様</h5></p>
+          <p>CPU:Intel Core i5-6200U 2.69Ghz(諸事情によりThrottleStopで常時フルパワー動作)</p>
+          <p>RAM:DDR3-1600 4GBx2 8GB</p>
+          <p>GPU:Intel HD Graphics 520</p>
+          <p>HDD:500GB WD Blue 5400rpm</p>
+          <br>
+          <p><h5>サブマシン</h5></p>
+          <p><h5>もはや不要。おもちゃ。ほっとくとフリーズする。</h5></p>
+          <p>CPU:Intel Atom Z520 1.33Ghz</p>
+          <p>RAM:DDR2-533 1GB</p>
+          <p>GPU:Intel GMA 500</p>
+          <p>HDD:40GB UltraATA/100対応</p>
+          <br><br>
+          <p><h4>スマートフォン</h4></p>
+          <p><h3>分からない人がいるので念のため記しますが、禿(SoftBank)茸(docomo)庭(au)です。
+          <p><h5>iPhone 6s 64GB(禿)</h5></p>
+          <p><h5>メイン端末</h5></p>
+          <p>メインで使用してる。けど最近異常なくらい不安定。Siriの反応が異様なくらい遅い。</p>
+          <p>バッテリー性能が76%だったり液晶が非純正だったりするのでやばい。</p>
+          <br>
+          <p><h5>Xperia Z2 32GB(茸)</h5></p>
+          <p><h5>カメラ撮影用端末</h5></p>
+          <p>サブ。カメラ性能がいい。シャッターボタン独立が一番好き。あとバッテリー持ち。</p>
+          <p>EOS M10の置き換え...にしたいのだが画面がバキバキでタッチ不能。修理パーツは出回ってそうなので修理したいところ。<s>実は6sのモバブ代わりになることがある。</s></p>
+          <br>
+          <p><h5>Xperia ZL2 32GB(庭)</h5></p>
+          <p><h5>Z2の置き換え用()端末()</h5></p>
+          <p>画面われてないけど重いから2000円、ということで買ったのだが思わぬ落とし穴。致命的なくらいゴーストタッチする。</p>
+          <p>Teardownして清掃も無意味。残念ながら修理パーツも出回ってなさそうなのでZ2の画面修理か端末の導入でこいつはモバブ兼ちょっとした雑用に使う。カメラ性能はZ2と同じで高いし。</p>
+          <br>
+          <p><h5>AQUOS Phone Xx 302SH(禿)</h5></p>
+          <p><h5>カメラ撮影用端末...だったけどもうモバブ</h5></p>
+          <p>2017/11月くらいに落として画面タッチが死んでからしばらく使っていなかったが、Xperia Z2導入ついでに買ったOTGケーブルで復活。でも性能がイマイチで使ってない。</p>
+          <p>カメラがそれなりに使えたりバッテリー持ちがいいので一応生き残ってはいるが、修理部品が無いに等しいので多分一番最初にリストラされる。</p>
+          <br><br>
+
+          <br>
+
+        </div>
       </div>
     </main>
     <footer rel="text/html" id="footer"></footrer>

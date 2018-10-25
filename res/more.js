@@ -9,12 +9,16 @@ $(document).ready(function(){
 });
 
 $(function(){
-  $("#footer").load("res/footer.html");
+  $("#footer").load("https://nuilpointer.github.io/res/footer.html");
 });
 
 $(function(){
-  $("#header").load("res/header.html");
+  $("#header").load("https://nuilpointer.github.io/res/header.html");
 });
+
+$(document).ready(function(){
+    $('.tabs').tabs();
+  });
 
 //ここからconsole出力
 console.log("このデバッグページを開くより https://materializecss.com/ を見た方が有益です。");
