@@ -2,12 +2,20 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  position:relative; top;
+  height:auto
 }
 
 .Site-content {
   flex: 1;
 }
-
+.mySlides {
+  display: none;
+  object-fit: cover;
+}
+.headpic {
+  object-fit: cover;
+}
 .tabs .tab a{
   color: #757575;
 } /*Black color to the text*/
