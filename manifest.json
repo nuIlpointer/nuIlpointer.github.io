@@ -1,5 +1,8 @@
 {
+	"name":				"ぬいるぽいんた",
 	"start_url":		"/",
+	"display":			"standalone",
+	"theme_color":		"#424242",
 	"icons": [
 		{
 			"src": "/android-chrome-36x36.png",
