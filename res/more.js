@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 $(document).ready(function() {
   $(window).scroll(function() {
-    if($(window).scrollTop()>580) {
+    if($(window).scrollTop()>600) {
       $('nav').addClass('grey darken-3');
     } else {
       $('nav').removeClass('grey darken-3');
