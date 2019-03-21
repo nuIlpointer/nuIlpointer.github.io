@@ -1,13 +1,5 @@
 {
-	"name":				"",
-	"short_name":		"",
-	"description":		"",
 	"start_url":		"/",
-	"display":			"standalone",
-	"orientation":		"any",
-	"background_color":	"#424242",
-	"theme_color":		"#424242",
-	"orientation":		"any",
 	"icons": [
 		{
 			"src": "/android-chrome-36x36.png",
