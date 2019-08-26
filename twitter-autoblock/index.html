@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta name="Description" content="ツイッター上で稼働している自動ブロッカーについて">
+    <meta name="theme-color" content="#424242">
+    <meta charset="UTF-8"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>自動ブロックについて - ぬいるぽいんた</title>
+  </head>
+
+  <body class="Site">
+    <!--Materialize JavaScriptの読み込み-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="../res/w3.css">
+    <link type="text/css" rel="stylesheet" href="../res/more.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../res/more.js"></script>
+
+    <!--header読み込み-->
+    <header>
+      <nav>
+        <div class="navbar-fixed">
+          <div class="nav-wrapper">
+            <a class="h1 brand-logo" href="http://nuiru.com"><img width="200" src="../res/icon.png" style="margin:10px" alt="nuilpointer"></img></a>
+          </div>
+        </div>
+      </nav>
+      <section>
+
+      </section>
+      <style>
+        nav{
+          position: fixed;
+          background: rgba(0, 0, 0, 0.2);
+          padding:0px 20px;
+          z-index:1;
+        }
+        .box{
+          margin-top: 20px;
+          height: 1000px;
+        }
+        nav li a:hover{
+          background-color: rgba(0, 0, 0, 0.3);
+          z-index:1;
+        }
+        ul{
+           z-index:0;
+        }
+        .tabs .tab a{
+          color: #979797;
+          background-color: #212121 !important;
+        }
+        .tabs .tab a.active {
+          background-color: #f5f5f5;
+          color: #ffffff;
+        }
+      </style>
+    </header>
+
+    <!--ここから内容-->
+    <main class="Site-content">
+
+      <div class="row container col">
+        <div class="col s12" id="about">
+          <br><br><br>
+          <p><h2>Twitterのアカウント(@nuilpointer)で運用している自動ブロッカーについて</h2></p><br>
+          <p><h3>TL;DR</h3></p>
+          <p>・自動ブロッカーの範囲がでかすぎて誤ブロックがかかるかもしれません、ただ範囲の大幅見直しの予定はありません</p>
+          <p>・ブロック解除の要請は<a href="https://twitter.com/nu1ru"><font color="#0000ff">(@nu1ru)</font></a>からどうぞ。</p><br>
+          <p><h4>はじめに</h4></p>
+          <p>私がTwitterのアカウント<a href="https://twitter.com/nuilpointer"><font color="#0000ff">(@nuilpointer)</font></a>で運用している、自動ブロッカーの動作に関して、どのような条件で動作するのかというリプライが飛んでいたこと、また、私が意図的にブロックしているケースは少ない、ということを説明させていただきます。</p><br>
+          <p><h4>そもそもなんで自動ブロッカー?</h4></p>
+          <p>単純にスパムアカウントがTwitterに蔓延していること、自分の見たくないジャンルを予防として見ないようにしたいから。</p>
+          <p>例えば「RTした人全員フォローする」とかです。あんまりこういうツイッターのフォロワーを稼ぐために利用してる人が好みではない、っていう理由です。あと個人的に絡めないジャンルの人(例えばけもフレ騒動で騒ぎ立てる人とか)とかもワードに入れてます。</p>
+          <p>フォローした後にそういう人だということに気づいて、私がブロ解して相手に不快な思いをしてもらうのも申し訳ないので、先行ブロックして関わらないようにしている、というのが理由でもあります。</p><br>
+          <p><h4>記事書くまでの経緯</h4></p>
+          </p>前提条件として</p>
+          <p>・少し前(8/10)に「810」で自動ブロッカーを走らせていたのが原因で多数の被誤ブロックユーザーが発生</p>
+          <p>・それ以前からも割とあいまいなブロックワードで指定していた時期があった(極端に言えばいいね稼ぎをブロックするために「いいね」でフィルターをかけたりけもフレの炎上が激しかった時に「けもフレ」でフィルターしていた時期があった)</p>
+          <br>
+          <p>私がとある人と合流してオフ会、その人に画像タグ付けしてもらう</p>
+          <p>↓</p>
+          <p>その人のツイートを見て私を知る</p>
+          <p>↓</p>
+          <p>えっなんでぬいるぽいんたって奴から絡んだこともないのにブロックされてるの(前提条件で話した極端なワード指定で引っかかったと思われるユーザーさんだった)</p>
+          <p>↓</p>
+          <p>オフ会相手の人がそれに気づいて私に知らせる</p>
+          <p>↓</p>
+          <p>その人に私が自動ブロッカーを走らせてる理由とかを伝えてツイートまでしてもらってしまう</p>
+          <p>↓</p>
+          <p>さすがに申し訳ないので私からも説明だけ入れたくて記事執筆</p><br>
+          <p><h4>動作条件</h4></p>
+          <p>大まかには</p>
+          <p>1.指定したワードでTwitterのPublic Streaming APIをからストリーミングを受ける</p>
+          <p>2.データからユーザーIDを抜き出す</p>
+          <p>3.ブロックしちゃいけないユーザー一覧(フォロー/フォロワーしかない)にIDが含まれていないか調べる、含まれていたら</p>
+          <p>4.受信したデータがリツイートでないか調べる、リツイートであればブロックしない</p>
+          <p>5.実際にblocks/createしてブロックを実行</p>
+          <p>を実行しています。</p>
+          <p>ワード一覧は一応</p>
+          <div onclick="obj=document.getElementById('blockword-list').style; obj.display=(obj.display=='none')?'block':'none';">
+            <a style="cursor:pointer;"><font color="#0000ff">ワード一覧(クリックで展開)</font></a>
+          </div>
+          <div id="blockword-list" style="display:none;clear:both;">
+            <p>RTした人全員フォローする,いいねした人全員フォローする,相互厨學校,相互希望,#相互フォロー,#オフパコ,#裏垢,#風俗,#エロ垢,#人妻,#アカウント販売,#垢販売,removeblock,8月10,8/10,810,淫夢の日,#淫夢の日</p>
+          </div><br>
+          <p><h4>今後の取り扱い</h4></p>
+          <p>誤ブロックを受けた方には大変申し訳ないのですが、<b>「ブロッカーの動作ワード」は大きくは変えない予定です。</b>範囲がでかい淫夢ネタとかは削除する予定ですが、RT稼ぎとかのツイートはあまり気分良くないので...</p>
+          <p>ブロック解除要請用のアカウントは設置させていただきます。お手数をおかけしますが<a href="https://twitter.com/nu1ru"><font color="#0000ff">こちら(@nu1ru)</font></a>のDMかリプライで連絡をお願いします。</p>
+          <p></p>
+        </div>
+      </div>
+    </main>
+    <footer rel="text/html" id="footer"></footer>
+  </body>
+</html>

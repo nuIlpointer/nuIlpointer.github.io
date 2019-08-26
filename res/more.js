@@ -9,11 +9,11 @@ $(document).ready(function(){
 });
 
 $(function(){
-  $("#footer").load("https://nuilpointer.github.io/res/footer.html");
+  $("#footer").load("../res/footer.html");
 });
 
 $(function(){
-  $("#header").load("https://nuilpointer.github.io/res/header.html");
+  $("#header").load("../res/header.html");
 });
 
 $(document).ready(function(){
@@ -21,13 +21,7 @@ $(document).ready(function(){
   });
 
 $(document).ready(function() {
-  $(window).scroll(function() {
-    if($(window).scrollTop()>600) {
-      $('nav').addClass('grey darken-3');
-    } else {
-      $('nav').removeClass('grey darken-3');
-    }
-  });
+  $('nav').removeClass('grey darken-3');
 });
 //ここからconsole出力
 console.log("このデバッグページを開くより https://materializecss.com/ を見た方が有益です。");

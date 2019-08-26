@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="Description" content="GPUを特定します">
+  <meta name="theme-color" content="#424242">
+  <meta charset="UTF-8"/>
+  <title>GetRender - nuilpointer</title>
+</head>
+<body>
+  <canvas id="canvas" width="0" height="0"></canvas>
+  <div>
+    あなたの使用しているレンダー(GPU)は:<br>
+  </div>
+  <div id="GPU"></div>
+  <script type="text/javascript">
+    var canvas = document.getElementById("canvas");
+    var gl = canvas.getContext("experimental-webgl");
+    var renderInfo = gl.getExtension("WEBGL_debug_renderer_info");
+    if (renderInfo != null) {
+      var vendor = gl.getParameter(renderInfo.UNMASKED_VENDOR_WEBGL);
+      var renderer = gl.getParameter(renderInfo.UNMASKED_RENDERER_WEBGL);
+      document.getElementById("GPU").innerHTML = renderer
+    }
+  </script>
+</body>
+</html>

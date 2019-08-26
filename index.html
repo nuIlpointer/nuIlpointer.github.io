@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta name="Description" content="ぬいるぽいんた">
+    <meta name="Description" content="ぬいるぽいんたに関して一番よく書かれたサイト">
     <meta name="theme-color" content="#424242">
     <meta charset="UTF-8"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Top - ぬいるぽいんた</title>
+    <style>
+      body {
+        color:white;
+        background-color: #292929;
+      }
+    </style>
   </head>
 
-  <body class="white Site">
+  <body class="Site">
     <!--Materialize JavaScriptの読み込み-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link rel="stylesheet" href="res/w3.css">
@@ -23,17 +29,13 @@
       <nav>
         <div class="navbar-fixed">
           <div class="nav-wrapper">
-            <a class="h1 brand-logo" href="https://nuilpointer.github.io"><img width="200" src="res/icon.png" style="margin:10px" alt="nuilpointer"></img></a>
+            <a class="h1 brand-logo" href="https://nuiru.com"><img width="200" src="res/icon.png" style="margin:10px" alt="nuilpointer"></img></a>
           </div>
         </div>
       </nav>
       <section>
 
       </section>
-      <!-- script -->
-      <script>
-
-      </script>
       <style>
         nav{
           position: fixed;
@@ -53,11 +55,19 @@
           height: 1000px;
         }
         nav li a:hover{
-          background: indigo;
+          background-color: rgba(0, 0, 0, 0.3);
           z-index:1;
         }
         ul{
            z-index:0;
+        }
+        .tabs .tab a{
+          color: #979797;
+          background-color: #212121 !important;
+        }
+        .tabs .tab a.active {
+          background-color: #f5f5f5;
+          color: #ffffff;
         }
       </style>
     </header>
@@ -68,7 +78,7 @@
       <div class="row container col">
         <div class="col s12">
           <ul class="tabs">
-            <li class="tab col s3"><a class="active black-text" href="#about">概要</a></li>
+            <li class="tab col s3"><a class="active" href="#about">概要</a></li>
             <li class="tab col s3"><a href="#downloads">作品</a></li>
             <li class="tab col s3"><a href="#sns">SNS</a></li>
             <li class="tab col s3"><a href="#devices">機材とか</a></li>
@@ -83,97 +93,47 @@
           <p>Twitter上での活動がほとんどですが、たまにDiscordサーバー上に出現します。</p>
           <p>鉄道、航空は写真撮影、音MADは音声など結構広く浅い微妙な感じですが、唯一深く入っているのがコンピュータです。</p>
           <p>NodeJS、Javaなどを使用したプログラミング、ホームページ作成、コンピュータの構築や設定など、この分野は一般的な知識よりはるかに詳しい、と(自らでは)思っています。</p>
-          <p>その類の質問であればかなり答えることができますので是非Twitterなので絡んできてください。</p>
+          <p>その類の質問であればかなり答えることができますので是非Twitterなどで絡んできてください。</p>
         </div>
 
         <div class="col s12" id="downloads">
           <br>
           <br>
           <p><h4>配布とか</h4></p>
-          <p><h5>スペック確認ツール的なの</h5></p>
-          <p>OS、CPU、メモリ容量、GPUの表示を行います。(基本的にはデバイスマネージャと同じ認識名になっているので例えばラデHD系はHD xx00 Seriesって表記になると思う)</p>
-          <p><img src="res/specviewer_ex1.png" alt="ソフトウェア外観"></p>
-          <p>このソフトウェアの特徴として、赤丸部分を押すとスペックをテキストとしてクリップボードに簡易的にコピーを行うことが出来る、という点があります。</p>
-          <p>パソコンに疎い人にこのソフトウェアを操作させてスペックを知ることもできます。</p>
-          <p>更新は最優先にしたいのですがパソコンがぶっ壊れてしまったのでしばらく更新できないです;(</p>
-          <p><a class="waves-effect waves-light btn-large indigo darken-4" href="http://nuilpointer.xyz/Softwares/SpecViewer/"><i class="material-icons left indigo darken-4">get_app</i>ダウンロード</a><p>
-          <br>
-          <p><h5>Spigotプラグイン</h5></p>
-          <p>Spigotプラグインの開発、配布を趣味がてらしています</p>
-          <p>GitHub参照。ほんの少しだけ配布されてます。</p>
-          <p>詳しくは</p>
-          <p><a class="waves-effect waves-light btn-large blue-grey lighten-4" href="https://github.com/nuilpointer"><i class="material-icons left blue-grey lighten-4">get_app</i>GitHubへ</a><p>
-          <p>また、Twitterクライアントの開発も行っておりま<s>す。</s>したが諸事情で凍結中。詳しくは<span style="margin-right: 1%"></span><a class="waves-effect waves-light btn blue-grey lighten-4" href="nuilClient/">こちら</a>
+          <p><h5>諸事情で凍結中</h5></p>
         </div>
 
         <div id="sns" class="col s12">
           <p>Twitter</p>
           <p><a href="https://twitter.com/nuilpointer?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @nuilpointer</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
           <p>Youtube</p>
-          <a href="https://www.youtube.com/channel/UC3P2J6vu4T7q6LmLznIUgwg" class="waves-effect waves-light btn red accent-4"><i class="material-icons left">play_arrow</i>Youtube</a>
+          <a href="https://www.youtube.com/c/nuilpointer?sub_confirmation=1" class="waves-effect waves-light btn red accent-4"><i class="material-icons left">play_arrow</i>Youtube</a>
 
         </div>
         <div id="devices" class="col s12">
           <p><h4>PC</h4></p>
           <p><h5>メインマシン</h5></p>
-          <p><h5>電源が壊れて絶賛ニート</h5></p>
-          <p>CPU:AMD Ryzen 7 1700 @3.79Ghz</p>
-          <p>RAM:DDR4-2800 4GBx2 8GB</p>
-          <p>GPU:ROG STRIX-GTX1070-O8G-GAMING</p>
-          <p>SSD:Samsung PM871 256GB</p>
-          <p>HDD:TOSHIBA 500GB 7200rpm + WD Blue 5400rpm 500GB x2 + HGST 5400rpm 500GB + WD 5400rpm 250GB</p>
+          <p><h5>だいぶスペック下がりましたね...</h5></p>
+          <p>CPU:Intel Core i5-9400F @2.90GHz 6C/6T</p>
+          <p>GPU:nVIDIA GeForce GTX 1060 3GB + nVIDIA GeForce GTX 660 2GB</p>
+          <p>RAM:DDR4-2133 4GBx2 8GB</p>
+          <p>SSD:Kingston SSDNow V300 240GB</p>
+          <p>HDD:Seagate 500GB 7200rpm x2 + WD 1TB 5400-7200rpm</p>
           <br>
-          <p><h5>サーバー</h5></p>
-          <p><h5>一生サーバーになるかと思ったらまさかのメインに返り咲き。但しGPUはなし。</h5></p>
-          <p>CPU:Intel Core i7-2600 @3.40Ghz</p>
-          <p>RAM:DDR3-1333 4GBx2 8GB</p>
-          <p>SSD:Crucial MX500 250GB</p>
           <br>
-          <p><h5>サブマシン</h5></p>
-          <p><h5>もはや不要。おもちゃ。ほっとくとフリーズする。</h5></p>
-          <p>CPU:Intel Atom Z520 1.33Ghz</p>
-          <p>RAM:DDR2-533 1GB</p>
-          <p>GPU:Intel GMA 500</p>
-          <p>HDD:40GB UltraATA/100対応</p>
-          <br><br>
-          <p><h4>スマートフォン</h4></p>
-          <p><h3>禿(SoftBank)茸(docomo)庭(au)で書いていきます。
-          <p><h5>Samsung Galaxy S8+(庭)</h5></p>
-          <p><h5>メイン端末</h5></p>
-          <p>ドフに行ったら中古が画面焼けジャンク落ちしてて25kだったから衝動買い。</p>
-          <p>SDM835もメモリ4GBもストレージ64GBもオーバースペックな模様。</p>
-          <p>SIMフリー化改造してIIJmioのプリペイドSIM刺して運用してる。でも期限切れで外に出なくなった。</p>
-          <br>
-          <p><h4>ここから放置端末</h4></p>
-          <p><h5>Xperia X Performance(庭)</h5></p>
-          <p><h5>カメラ撮影用端末andサブ端末</h5></p>
-          <p>サブ。カメラ性能がいい。シャッターボタン独立が一番好き。あとバッテリー持ち。</p>
-          <p>元々こいつをメインで使ってたんだけど↑を買ったときに調子乗ってたら落として割った。かなしい。</p>
-          <p>SDM820もメモリ3GBもストレージ32GBもオーバースペックな模様。microUSBをBluetoothイヤホンに奪われ仕事なし。</p>
-          <br>
-          <p><h5>Huawei P9 lite</h5></p>
-          <p><h5>使い道なし</h5></p>
-          <p>元サブ。バッテリー持ちがすごくよかったので愛用していたが<s>バッテリー交換&画面交換をした辺りから特定の部分を押すと勝手に再起ループするようになった。</s></p>
-          <p>画面基盤の絶縁不足だったらしく結局マスキングテープで画面基盤を絶縁して直った。</p>
-          <p>本当はこれくらいのスペックで十分だしバッテリー持ちこっちのがメインよりいいなんだけどそれが使えないからつらい</p>
-          <br>
-          <p><h5>Xperia Z2 32GB(茸)</h5></p>
-          <p><h5>カメラ撮影用端末</h5></p>
-          <p>サブ。カメラ性能がいい。シャッターボタン独立が一番好き。あとバッテリー持ち。</p>
-          <p>EOS M10の置き換え...にしたいのだが画面がバキバキでタッチ不能。修理パーツは出回ってそうなので修理したいところ。<s>実は6sのモバブ代わりになることがある。</s></p>
-          <p>もはや最近は出番なしで放置中。</p>
-          <br>
-          <p><h5>AQUOS Phone Xx 302SH(禿)</h5></p>
-          <p><h5>カメラ撮影用端末...だったけどもうモバブ</h5></p>
-          <p>2017/11月くらいに落として画面タッチが死んでからしばらく使っていなかったが、Xperia Z2導入ついでに買ったOTGケーブルで復活。でも性能がイマイチで使ってない。</p>
-          <p>カメラがそれなりに使えたりバッテリー持ちがいいので一応生き残ってはいるが、<s>修理部品が無いに等しいので多分一番最初にリストラされる。</s>ZL2が最初にリストラされた。てかこいつもほぼリストラ寸前。</p>
-          <br><br>
-
-          <br>
+          <p><h4>スマホ</h4></p>
+          <p><h5>ZTE AXON M Z-01K</h5></p>
+          <p>ロケモバで運用中</p>
+          <p>オーバースペック？電池持ちが絶望的に悪かった</p>
+          <p>RAM4GB/ROM64GB/SD64GB</p>
+          <p><h5>Huawei nova2 HWV31</h5></p>
+          <p>SIMなしの予備端末</p>
+          <p>P9 liteと比べて若干電池持ち悪い...?まあZ-01Kよりはいいけど</p>
+          <p>RAM4GB/ROM64GB</p>
 
         </div>
       </div>
     </main>
-    <footer rel="text/html" id="footer"></footrer>
+    <footer rel="text/html" id="footer"></footer>
   </body>
 </html>
