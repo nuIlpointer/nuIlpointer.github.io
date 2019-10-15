@@ -14,10 +14,7 @@
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a class="h1 brand-logo" 
-href="https://nuilpointer.github.io/nBot"><img width="200" 
-src="../../res/nBot_logo.png" style="margin:10px" 
-alt="nuilpointer"></img></a>
+      <a class="h1 brand-logo" href="https://nuilpointer.github.io/nBot"><img width="200" src="../../res/nBot_logo.png" style="margin:10px" alt="nuilpointer"></img></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="https://nuilpointer.github.io/">nuilpointer Home</a></li>
       </ul>
@@ -30,12 +27,157 @@ alt="nuilpointer"></img></a>
   </nav>
 
 
-  <div class="container center-align" id="building">
-    <h3>申し訳ありません！当Botは準備中です。</h3>
-    <p>現在、一般開放に向け、準備を行っております。</p>
-    <p>Botは「フォートナイト民のmy home」様にて運用しております。</p>
-    <p>ドキュメントの公開までしばらくお待ちください。</p>
-    <p>サーバー内で ./help を入力してヘルプを表示することもできます。</p>
+  <div class="container" id="building">
+    <table class="responsive-table">
+      <p><h4>nuilpointer's Discord Bot コマンド一覧</h4></p>
+      <p>「nuilpointer's Discord Bot」(nBot)に搭載されたコマンド一覧です。</p>
+      <p>ベータ版、リリース版でコマンドの実装に差異があります(ベータのみの実装、或いはベータ版で削除される機能があるため)</p>
+      <p>使用可否はリストにてご確認ください。</p>
+      <p>リリース版のプレフィクスは「./」、ベータ版は「.!」です。</p>
+      <thead>
+        <tr>
+          <th>コマンド</th>
+          <th>説明</th>
+          <th>使用例</th>
+          <th>ジャンル</th>
+          <th>リリース版</th>
+          <th>ベータ版</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>about</td>
+          <td>Botの説明を表示します。</td>
+          <td>./about</td>
+          <td>システム</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>bose</td>
+          <td>リリース版:音圧を強化した音声ファイルを再生します。ベータ版:音圧を強化した音声ファイルを生成します。</td>
+          <td>./bose {YouTube URL}</td>
+          <td>メディア</td>
+          <td>△(※1)</td>
+          <td>△(※1)</td>
+        </tr>
+        <tr>
+          <td>compress</td>
+          <td>ファイルを圧縮します。png、jpg、mp4、gif、YouTube URLが有効です。</td>
+          <td>./compress {YouTube URL}</td>
+          <td>メディア</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>dy</td>
+          <td>YouTube 動画をダウンロードします。-quality={itag} -format={ファイル名拡張子}が指定できます。フォーマットは名前のみなので変換は行われません。</td>
+          <td>./dy {YouTube URL} -quality=251 -format=webm</td>
+          <td>メディア</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>gInfo</td>
+          <td>ギルドの詳細を表示します。エラーのため使用できない場合があります。</td>
+          <td>./gInfo</td>
+          <td>ユーティリティ</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>tomp3</td>
+          <td>YouTube 動画をmp3形式で取得します。</td>
+          <td>./tomp3 {YouTube URL}</td>
+          <td>メディア</td>
+          <td>○</td>
+          <td>△(※1)</td>
+        </tr>
+        <tr>
+          <td>pi</td>
+          <td>pingを通します。-port={ポート番号}でポートの指定が可能です。</td>
+          <td>./pi nuiru.com -port=25565</td>
+          <td>ユーティリティ</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>systemusage</td>
+          <td>Bot稼働サーバの状況を表示します。</td>
+          <td>./systemusage</td>
+          <td>システム</td>
+          <td>○</td>
+          <td>△(※2)</td>
+        </tr>
+        <tr>
+          <td>tt</td>
+          <td>Twitterに投稿されたツイートの時刻を表示します。</td>
+          <td>./tt {ツイートURL}</td>
+          <td>ユーティリティ</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>help</td>
+          <td>ヘルプ画面を表示します。</td>
+          <td>./help</td>
+          <td>システム</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>tubech</td>
+          <td>ユーチューブのチャンネル登録者を表示します。APIの問題である程度以上の登録者は多く表示されます。</td>
+          <td>.!tubech {チャンネルURL}</td>
+          <td>ユーティリティ</td>
+          <td>×</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>gettw</td>
+          <td>ツイッター ユーザ情報を表示します。</td>
+          <td>.!gettw nuilpointer</td>
+          <td>ユーティリティ</td>
+          <td>×</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>play</td>
+          <td>YouTube 動画をチャンネルで再生します。</td>
+          <td>./play {YouTube URL}</td>
+          <td>メディア</td>
+          <td>△(※3)</td>
+          <td>△(※3)</td>
+        </tr>
+        <tr>
+          <td>join</td>
+          <td>実行者が参加しているボイスチャンネルに参加します。</td>
+          <td>./join</td>
+          <td></td>
+          <td>△(※3)</td>
+          <td>△(※3)</td>
+        </tr>
+        <tr>
+          <td>loop</td>
+          <td>ループをトグルします。</td>
+          <td>./loop</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>./</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+      </tbody>
+    </table>
+    ※1…不安定、失敗の確率が高く実用に向きません。<br>
+    ※2…ダサいです。絶望的です。<br>
+    ※3…MusicBot特有の問題(主に採用モジュール)が発生し、突然の再生終了、再生不能などの問題が発生する場合があります。<br>
   </div>
 
 
@@ -44,8 +186,7 @@ alt="nuilpointer"></img></a>
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">nuilpointer's Discord Bot</h5>
-          <p class="grey-text text-lighten-4">当Botはサーバー「フォートナイト民のmy home」様向けに運用しているBotです。一般公開はしばらくお待ちください。また、バグなどの報告は <a href="https://twitter.com/nuilpointer/">作者Twitter</a>
-          或いはDiscord nuilpointer#0417 までお問い合わせください。また、対応に数日~数週間を要する場合があります。</p>
+          <p class="grey-text text-lighten-4">ぬいるぽいんたのゴミの結晶</p>
 
 
         </div>
@@ -54,15 +195,8 @@ alt="nuilpointer"></img></a>
           <ul>
             <li><a class="white-text" href="https://nuilpointer.github.io/nBot/">ホームページ</a></li>
             <li><a class="white-text" href="https://nuilpointer.github.io/nBot/Docs">ドキュメント</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">外部リンク</h5>
-          <ul>
-            <li><a class="white-text" href="https://twitter.com/nuilpointer/">作者Twitter</a></li>
-            <li><a class="white-text" href="https://nuilpointer.github.io/">作者ホームページ</a></li>
-            <li><a class="white-text" href="https://discord.gg/9SAhhqq">フォートナイト民のmy home</a></li>
-            <li><a class="white-text" href="https://twitter.com/FortniteMyHome">フォートナイト民のmy home 公式Twitter</a></li>
+            <li><a class="white-text" href="https://twitter.com/nuilpointer/">Twitter</a></li>
+            <li><a class="white-text" href="https://nuilpointer.github.io/">トップページ</a></li>
           </ul>
         </div>
       </div>
@@ -77,8 +211,8 @@ alt="nuilpointer"></img></a>
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
 
   </body>
 </html>
