@@ -1,268 +1,201 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta property="og:title" content="Top - ぬいるぽいんた" />
-    <meta property="og:description" content="ぬいるぽいんたについて一番よく記述されたサイト" />
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    <meta charset="UTF-8"/>
+    <title>Top - ぬいるぽいんた</title>
     <meta property="og:url" content="https://nuiru.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="トップページ" />
+    <meta property="og:description" content="ぬいるぽいんたについて一番よく記述されたサイト" />
+    <meta property="og:site_name" content="ぬいるぽいんた" />
     <meta property="og:image" content="https://nuiru.com/header.jpg" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@nuilpointer" />
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@nuilpointer"/>
     <meta name="Description" content="ぬいるぽいんたに関して一番よく書かれたサイト">
     <meta name="theme-color" content="#424242">
-    <meta charset="UTF-8"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="./res/leon.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Top - ぬいるぽいんた</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js" async></script>
+    <script defer>
+      window.onload = function() {
+        document.addEventListener('DOMContentLoaded', function() {
+          var options = new Object;
+          var elems = document.querySelectorAll('.sidenav');
+          var instances = M.Sidenav.init(elems, options);
+        });
+
+        $(document).ready(function(){
+          $('.sidenav').sidenav();
+        });
+
+        $(document).ready(function(){
+            $('.tabs').tabs();
+        });
+
+        //ここからconsole出力
+        console.log("このデバッグページを開くより https://materializecss.com/ を見た方が有益です。");
+        console.log("保存して察しのついた方、主の別ページの使いまわしのHPです\n手を抜いてはいけない(戒め)");
+
+      }
+    </script>
     <style>
-      body {
+
+      .Site {
         color:white;
         background-color: #292929;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+
       }
-      #loading {
-        background:rgba(0, 0, 0, 0);
+
+      nav{
+        position: fixed;
+        background: rgba(0, 0, 0, 0.2);
+        padding:0px 20px;
+        z-index:1;
+      }
+
+      section{
+        background-image: url(header.webp);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 40vh;
+      }
+
+      ul {
+         z-index:0;
+      }
+      .tabs .tab a{
+        color: #757575;
+        background-color: #212121 !important;
+      }
+      .tabs .tab a:hover {
+        background-color: #9e9e9e !important;
+        color: #000000;
+      }
+
+      .tabs .tab a:focus.active{
+        background-color: #e8eaf6;
+      }
+      .tabs .tab a.active {
+        background-color: #f5f5f5;
+        color: #ffffff;
+      }
+      .tabs .indicator {
+        background-color: #1a237e;
+      }
+      .card {
+        background-color: #292929;
       }
     </style>
   </head>
-  <body class="Site" id="Site">
-    <div id="loading"></div>
-    <div id="site-main">
-      <!--Materialize JavaScriptの読み込み-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-      <link rel="stylesheet" href="res/w3.css">
-      <link type="text/css" rel="stylesheet" href="./res/more.css"/>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-      <script type="text/javascript" src="./res/more.js"></script>
 
+  <body class="Site" id="site">
+    <div id="sitemain" style="flex: 1 0 auto;">
       <!--header読み込み-->
       <header>
-        <nav>
-          <div class="navbar-fixed">
+        <nav class="">
+          <div class="navbar-fixed hide-on-med-and-down">
             <div class="nav-wrapper">
-              <a class="h1 brand-logo" href="https://nuiru.com"><img width="200" src="res/icon.png" style="margin:10px" alt="nuilpointer"></img></a>
+              <a class="h1 brand-logo" href="https://nuiru.com"><img width="200" src="res/icon.png" style="margin:10px" alt="nuilpointer"></a>
             </div>
           </div>
         </nav>
+        <nav class="nav-extended hide-on-large-only grey darken-4">
+          <div class="nav-wrapper">
+            <a class="h1 brand-logo" href="https://nuiru.com"><img width="200" src="res/icon.png" style="margin:10px" alt="nuilpointer"></img></a>
+          </div>
+          <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+              <li class="tab"><a class="active" href="#about" style="background-color: rgba(0, 0, 0, 0);">概要</a></li>
+              <li class="tab"><a href="#downloads">配布とか</a></li>
+              <li class="tab"><a href="#sns">SNS</a></li>
+              <li class="tab"><a href="#devices">機材とか</a></li>
+            </ul>
+          </div>
+        </nav>
         <section>
-
         </section>
-        <style>
-          nav{
-            position: fixed;
-            background: rgba(0, 0, 0, 0.2);
-            padding:0px 20px;
-            z-index:1;
-          }
-          section{
-            background-image: url(header.jpg);
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: 601px;
-          }
-          .box{
-            margin-top: 20px;
-            height: 1000px;
-          }
-          nav li a:hover{
-            background-color: rgba(0, 0, 0, 0.3);
-            z-index:1;
-          }
-          ul{
-             z-index:0;
-          }
-          .tabs .tab a{
-            color: #979797;
-            background-color: #212121 !important;
-          }
-          .tabs .tab a.active {
-            background-color: #f5f5f5;
-            color: #ffffff;
-          }
-          .card {
-            background-color: #292929;
-          }
-        </style>
       </header>
 
       <!--ここから内容-->
       <main class="Site-content">
-
-        <div class="row container col">
-          <div class="col s12">
+        <div class="row">
+          <div class="col s12 hide-on-med-and-down">
             <ul class="tabs">
               <li class="tab col s3"><a class="active" href="#about">概要</a></li>
-              <li class="tab col s3"><a href="#downloads">作品</a></li>
+              <li class="tab col s3"><a href="#downloads">配布とか</a></li>
               <li class="tab col s3"><a href="#sns">SNS</a></li>
               <li class="tab col s3"><a href="#devices">機材とか</a></li>
             </ul>
           </div>
+          <div class="container" style="padding-top: 30px;">
+            <div class="col s12" id="about">
+              <p><h1>おまえは誰だ</h1></p>
+              <p>なまえ:ぬいるぽいんた</p>
+              <p>ぬいるとでも呼んでください それ以外は気づきません</p>
+              <p>趣味:パソコンとスマホ、ゲームとプログラミング(ちょっと)、鉄道とか航空機とか風景の撮影、VTuberを見たり</p>
+              <p>最近Vしか見てない</p>
+              <p><h4>このサイトはなんだ</h4></p>
+              <p>私の自己紹介ページです</p>
+              <p>特にこれと言って重要な事柄は書いていませんが少しだけ情報があったりします</p>
+              <p><h4>SNSとか</h4></p>
+              <p><a href="https://twitter.com/nuilpointer">ツイッター</a></p>
+              <p><a href="https://youtube.com/c/nuiru">つべ</a></p>
+              <p><a href="https://discord.gg/zuytE6J">でぃすこさば</a></p>
+            </div>
 
-          <div class="col s12" id="about">
-            <br>
-            <br>
-            <p><h4>概要</h4></p>
-            <p>主に音MAD、クソコラ、ホームページの制作(このサイトみたいに)、ゲーム、鉄道、航空、コンピュータなど幅広い趣味を持っている人です。</p>
-            <p>Twitter上での活動がほとんどですが、たまにDiscordサーバー上に出現します。</p>
-            <p>鉄道、航空は写真撮影、音MADは音声など結構広く浅い微妙な感じですが、唯一深く入っているのがコンピュータです。</p>
-            <p>NodeJS、Javaなどを使用したプログラミング、ホームページ作成、コンピュータの構築や設定など、この分野は一般的な知識よりはるかに詳しい、と(自らでは)思っています。</p>
-            <p>その類の質問であればかなり答えることができますので是非Twitterなどで絡んできてください。</p>
-          </div>
+            <div class="col s12" id="downloads">
+              <p><h1>配布とか</h1></p>
+              <p><h5>DiscordのBot</h5></p>
+              <p><a href="https://nuiru.com/nBot/">こちらから</a></p>
+              <p>YouTubeのダウンロードとか実装しているBotです。</p>
 
-          <div class="col s12" id="downloads">
-            <br>
-            <br>
-            <p><h4>配布とか</h4></p>
-            <p><h5>諸事情で凍結中</h5></p>
-          </div>
+              <p><h5>GPU検出するやつ</h5></p>
+              <p><a href="https://nuiru.com/detectYourGPU/">こちらから</a></p>
+              <p>ブラウザのレンダーを表示します。GPUとかわかると思います。それだけです。</p>
 
-          <div id="sns" class="col s12">
-            <p>Twitter</p>
-            <p><a href="https://twitter.com/nuilpointer?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @nuilpointer</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p><br>
-            <a class="twitter-timeline" data-lang="ja" href="https://twitter.com/nuilpointer?ref_src=twsrc%5Etfw">Tweets by nuilpointer</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            <p>Youtube</p>
-            <a href="https://www.youtube.com/channel/UC3P2J6vu4T7q6LmLznIUgwg" class="waves-effect waves-light btn red accent-4"><i class="material-icons left">play_arrow</i>Youtube</a>
 
-          </div>
-          <div id="devices" class="col s12">
-            <p><h4>PC</h4></p>
-            <div class="row">
-              <div class="col s12 m7">
-                <div class="card">
-                  <div class="card-image">
-                    <img src="res/DSC_0406.jpg" width="1280">
-                    <span class="card-title">メインマシン</span>
-                  </div>
-                  <div class="card-content">
-                    <p>CPU:Intel Core i7-7700 @3.60GHz 4C/8T</p>
-                    <p>GPU:nVIDIA GeForce GTX 1050 Ti 4GB</p>
-                    <p>RAM:DDR4-2666 8GBx2 16GB</p>
-                    <p>SSD:HP S700 SSD 250GB</p>
-                    <p>HDD:TOSHIBA 320GB 7200rpm</p>
+
+
+              <p><a href="steam://rungameid/359550">ここを押すと幸せになれます</a></p>
+            </div>
+
+            <div id="sns" class="col s12">
+              <p>Twitter</p>
+              <p><a href="https://twitter.com/nuilpointer?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @nuilpointer</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p><br>
+              <p>Youtube</p>
+              <a href="https://www.youtube.com/channel/UC3P2J6vu4T7q6LmLznIUgwg" class="waves-effect waves-light btn red accent-4"><i class="material-icons left">play_arrow</i>Youtube</a>
+
+            </div>
+            <div id="devices" class="col s12">
+              <p><h4>PC</h4></p>
+              <div class="row">
+                <div class="col s12 m7">
+                  <div class="card">
+                    <div class="card-content">
+                      <p>CPU:Intel Core i7-7700K @4.20GHz 4C/8T</p>
+                      <p>GPU:nVIDIA GeForce GTX 1660 6GB</p>
+                      <p>RAM:DDR4-2666 16GBx2 32GB</p>
+                      <p>SSD:WD Black M.2 NVMe SSD 1TB</p>
+                      <p>HDD:TOSHIBA 1TB 7200rpm</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col s12 m7">
-                <div class="card">
-                  <div class="card-image">
-                    <img src="res/DSC_0159.jpg" width="1280">
-                    <span class="card-title">サブ兼サーバーマシン</span>
-                  </div>
-                  <div class="card-content">
-                    <p>CPU:Intel Core i7-4770 @3.40GHz 4C/8T</p>
-                    <p>GPU:nVIDIA GeForce GTX 750 Ti 2GB LP</p>
-                    <p>RAM:DDR3-1600 4GBx2 2GBx2 12GB</p>
-                    <p>SSD:Crucial 120GB</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12 m7">
-                <div class="card">
-                  <div class="card-image">
-                    <img src="res/DSC_0394.jpg" width="1280">
-                    <span class="card-title">旧鯖マシン</span>
-                  </div>
-                  <div class="card-content">
-                    <p>CPU:Intel Pentium G640 @2.80GHz 2C/2T</p>
-                    <p>GPU:nVIDIA GeForce GT 610 1GB LP</p>
-                    <p>RAM:DDR3-1333 2GBx2 4GB</p>
-                    <p>HDD:Seagate 320GB 7200rpm</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <p><h4>スマホ</h4></p>
-            <p><h5></h5></p>
-            <br>
-            <div class="row">
-              <div class="col s12 m7">
-                <div class="card">
-                  <div class="card-image">
-                    <img src="res/ENvk5I5UwAAsQhb.png" width="1280">
-                    <span class="card-title">Nokia 6.1 Plus</span>
-                  </div>
-                  <div class="card-content">
-                    <p>ロケモバで運用中</p>
-                    <p>初めてのノッチ付き端末</p>
-                    <p>Android One端末だけど正直利点がよくわかってない(オイ</p>
-                    <p>買った理由は「ホロリーがしたかったから」。なんでそれでメイン端末買い換えるねん</p>
-                    <p>実は元々TA-1099(Nokia X6中国版)だったのでインターネットのよくわからんサイトに金払って</p>
-                    <p>BLUしてもらってROM焼いて泥One化した これでホロリーが動いたので満足</p>
-                    <p>RAM4GB/ROM64GB/SD128GB</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12 m7">
-                <div class="card">
-                  <div class="card-image">
-                    <img src="res/DSC_0535.jpg" width="1280">
-                    <span class="card-title">Xperia XZs</span>
-                  </div>
-                  <div class="card-content">
-                    <p>NFC決済用のサブ端末として使用</p>
-                    <p>ただ泥9じゃないのが悲しい</p>
-                    <p>禿モデル&判定▲なのでメインにはなれないという悲しいヤツ</p>
-                    <p>光漏れ5kのジャンクだったけど外装は綺麗だったので満足</p>
-                    <p>RAM4GB/ROM32GB/SD64GB</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12 m7">
-                <div class="card">
-                  <div class="card-image">
-                    <img src="res/EK7u5T8U0AECdh-.jpg" width="1280">
-                    <span class="card-title">Xperia X Compact</span>
-                  </div>
-                  <div class="card-content">
-                    <p>放置</p>
-                    <p>元メイン端末、バッテリー持ちもそこそこで良かった</p>
-                    <p>スピーカー不良があったけどイヤホンつなぐ頻度のが高かったので特に気にしてない</p>
-                    <p>通じるかわからないけど「AppleのXperia」です</p>
-                    <p>RAM3GB/ROM32GB</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12 m7">
-                <div class="card">
-                  <div class="card-image">
-                    <img src="res/EK3MRfEVAAEqoY7.jpg" width="1280">
-                    <span class="card-title">AQUOS ZETA SH-04H</span>
-                  </div>
-                  <div class="card-content">
-                    <p>放置</p>
-                    <p>元サブ端末、120Hzは偉大</p>
-                    <p>バッテリーがヘタってるのか知らないけどキャリブレーションしないとつらそう</p>
-                    <p>カメラが曇ってるので何とも言えない</p>
-                    <p>RAM3GB/ROM32GB</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12 m7">
-                <div class="card">
-                  <div class="card-image">
-                    <img src="res/IMG_20191010_132040.jpg" width="1280">
-                    <span class="card-title">Huawei nova lite 2 FIG-LA1</span>
-                  </div>
-                  <div class="card-content">
-                    <p>放置</p>
-                    <p>元・唯一のPieマシン 現・どうしようもない端末</p>
-                    <p>タダでもらった端末、特に用途も決めてないけど実は元メインだったり</p>
-                    <p>タッチ不良すら出るくらい使いこんでしまったので修理を検討している</p>
-                    <p>RAM3GB/ROM32GB</p>
+              <div class="row">
+                <div class="col s12 m7">
+                  <div class="card">
+                    <div class="card-content">
+                      <p>CPU:Intel Core i7-4700MQ @2.40GHz 4C/8T</p>
+                      <p>GPU:Intel HD Graphics 4600</p>
+                      <p>RAM:DDR3-1600 8GBx2 16GB</p>
+                      <p>SSD:Crucial 512GB</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -270,7 +203,24 @@
           </div>
         </div>
       </main>
-      <footer rel="text/html" id="footer"></footer>
     </div>
+
+    <footer class="page-footer grey darken-4">
+      <div class="transparent container row s12">
+        <h5 class="white-text">外部リンク</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://nuiru.com">トップ</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://twitter.com/nuIlpointer">Twitter</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.youtube.com/c/nuilpointer">YouTube</a></li>
+            <li><a class="grey-text text-lighten-3" href="http://www.nicovideo.jp/user/45885932">niconico</a></li>
+          </ul>
+        </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <a class="white-text right" href="https://materializecss.com"><u>Powered by Materialize CSS.</u></a>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>
