@@ -46,10 +46,26 @@
       </thead>
       <tbody>
         <tr>
-          <td>about</td>
-          <td>Botの説明を表示します。</td>
-          <td>./about</td>
+          <td>(引用機能)</td>
+          <td>https://discordapp.com/ から始まるメッセージリンクを自動的に整形して引用します。</td>
+          <td>(メッセージリンクを貼り付けることで発動)</td>
           <td>システム</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>play</td>
+          <td>YouTube 動画を再生します。現在試験中です。</td>
+          <td>./play</td>
+          <td>メディア</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>repeat</td>
+          <td>再生中の音楽のリピート切り替えを行います。現在試験中です。</td>
+          <td>./repeat</td>
+          <td>メディア</td>
           <td>○</td>
           <td>○</td>
         </tr>
@@ -63,32 +79,64 @@
         </tr>
         <tr>
           <td>dy</td>
-          <td>YouTube 動画をダウンロードします。-quality={itag} -format={ファイル名拡張子}が指定できます。フォーマットは名前のみなので変換は行われません。</td>
-          <td>./dy {YouTube URL} -quality=251 -format=webm</td>
-          <td>メディア</td>
-          <td>○</td>
-          <td>○</td>
-        </tr>
-        <tr>
-          <td>plist</td>
-          <td>YouTube プレイリストをダウンロードします。</td>
-          <td>./plist {YouTube playlist URL}</td>
+          <td>YouTube, Twitter, ニコニコ動画のコンテンツをmp4で取得します。</td>
+          <td>./dy {YouTube URL}</td>
           <td>メディア</td>
           <td>○</td>
           <td>○</td>
         </tr>
         <tr>
           <td>tomp3</td>
-          <td>YouTube 動画をmp3形式で取得します。</td>
+          <td>YouTube,niconico動画のコンテンツをmp3形式で取得します。</td>
           <td>./tomp3 {YouTube URL}</td>
           <td>メディア</td>
           <td>○</td>
-          <td>△(※1)</td>
+          <td>○</td>
         </tr>
         <tr>
           <td>pi</td>
           <td>pingを通します。-port={ポート番号}でポートの指定が可能です。</td>
           <td>./pi nuiru.com -port=25565</td>
+          <td>ユーティリティ</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>su</td>
+          <td>短縮URLを発行します。</td>
+          <td>./su https://nuilpointer.github.io/nBot/Docs</td>
+          <td>ユーティリティ</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>tt</td>
+          <td>Twitterに投稿されたツイートの時刻を表示します。</td>
+          <td>./tt {ツイートURL}</td>
+          <td>ユーティリティ</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>twipro</td>
+          <td>ツイッター ユーザ情報を表示します。</td>
+          <td>./twipro nuilpointer</td>
+          <td>ユーティリティ</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>zcode</td>
+          <td>郵便番号から住所情報を返します。</td>
+          <td>./zcode 100-8929</td>
+          <td>ユーティリティ</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td>track</td>
+          <td>ヤマト運輸の荷物追跡を行います。</td>
+          <td>./track {12桁の追跡番号}</td>
           <td>ユーティリティ</td>
           <td>○</td>
           <td>○</td>
@@ -102,18 +150,10 @@
           <td>○</td>
         </tr>
         <tr>
-          <td>su</td>
-          <td>短縮URLを発行します。</td>
-          <td>./su https://nuilpointer.github.io/nBot/Docs</td>
+          <td>nping</td>
+          <td>ぬいるですこぼっとのサーバ→Discordのメッセージサーバー→ぬいるですこぼっと鯖のping表示と生存確認が行えます。</td>
+          <td>./nping</td>
           <td>システム</td>
-          <td>○</td>
-          <td>×</td>
-        </tr>
-        <tr>
-          <td>tt</td>
-          <td>Twitterに投稿されたツイートの時刻を表示します。</td>
-          <td>./tt {ツイートURL}</td>
-          <td>ユーティリティ</td>
           <td>○</td>
           <td>○</td>
         </tr>
@@ -126,20 +166,28 @@
           <td>○</td>
         </tr>
         <tr>
-          <td>twipro</td>
-          <td>ツイッター ユーザ情報を表示します。</td>
-          <td>./twipro nuilpointer</td>
-          <td>ユーティリティ</td>
+          <td>about</td>
+          <td>Botの説明を表示します。</td>
+          <td>./about</td>
+          <td>システム</td>
           <td>○</td>
-          <td>○(※4)</td>
+          <td>○</td>
         </tr>
         <tr>
-          <td>ocr</td>
-          <td>添付されたメディアから文字を抽出します。</td>
-          <td>./ocr</td>
-          <td>ユーティリティ</td>
+          <td>gInfo</td>
+          <td>サーバーについての情報を表示します。</td>
+          <td>./gInfo</td>
+          <td>システム</td>
           <td>○</td>
-          <td>×</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>./</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
         </tr>
         <tr>
           <td></td>
@@ -153,7 +201,6 @@
     </table>
     ※1…不安定、失敗の確率が高く実用に向きません。<br>
     ※2…ダサいです。絶望的です。<br>
-    ※3…MusicBot特有の問題(主に採用モジュール)が発生し、突然の再生終了、再生不能などの問題が発生する場合があります。<br>
     ※3…Betaでは「gettw」です。<br>
   </div>
 
