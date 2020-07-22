@@ -32,6 +32,7 @@
       <p><h4>nuilpointer's Discord Bot コマンド一覧</h4></p>
       <p>「nuilpointer's Discord Bot」(nBot)に搭載されたコマンド一覧です。</p>
       <p>ベータ版、リリース版でコマンドの実装に差異があります(ベータのみの実装、或いはベータ版で削除される機能があるため)</p>
+      <p>現在ベータ版がv1コード、リリース版Botではv2コード(書き直したバージョン)を運用しています。コマンドの挙動、有無に差異がある可能性があります。</p>
       <p>使用可否はリストにてご確認ください。</p>
       <p>リリース版のプレフィクスは「./」、ベータ版は「.!」です。</p>
       <thead>
@@ -74,7 +75,7 @@
           <td>ファイルを圧縮します。png、jpg、mp4、gif、YouTube URLが有効です。</td>
           <td>./compress {YouTube URL}</td>
           <td>メディア</td>
-          <td>○</td>
+          <td>×</td>
           <td>○</td>
         </tr>
         <tr>
@@ -90,7 +91,7 @@
           <td>YouTube,niconico動画のコンテンツをmp3形式で取得します。</td>
           <td>./tomp3 {YouTube URL}</td>
           <td>メディア</td>
-          <td>○</td>
+          <td>×</td>
           <td>○</td>
         </tr>
         <tr>
@@ -98,16 +99,16 @@
           <td>pingを通します。-port={ポート番号}でポートの指定が可能です。</td>
           <td>./pi nuiru.com -port=25565</td>
           <td>ユーティリティ</td>
-          <td>○</td>
+          <td>×</td>
           <td>○</td>
         </tr>
         <tr>
-          <td>su</td>
+          <td>short</td>
           <td>短縮URLを発行します。</td>
-          <td>./su https://nuilpointer.github.io/nBot/Docs</td>
+          <td>./short https://nuilpointer.github.io/nBot/Docs</td>
           <td>ユーティリティ</td>
           <td>○</td>
-          <td>○</td>
+          <td>○(.!su)</td>
         </tr>
         <tr>
           <td>tt</td>
@@ -167,7 +168,7 @@
         </tr>
         <tr>
           <td>about</td>
-          <td>Botの説明を表示します。</td>
+          <td>Botの状態を表示します。</td>
           <td>./about</td>
           <td>システム</td>
           <td>○</td>
@@ -189,19 +190,8 @@
           <td>○</td>
           <td>○</td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>./</td>
-          <td></td>
-          <td>○</td>
-          <td>○</td>
-        </tr>
       </tbody>
     </table>
-    ※1…不安定、失敗の確率が高く実用に向きません。<br>
-    ※2…ダサいです。絶望的です。<br>
-    ※3…Betaでは「gettw」です。<br>
   </div>
 
 
