@@ -1,226 +1,174 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
-    <meta charset="UTF-8"/>
-    <title>Top - ぬいるぽいんた</title>
-    <meta property="og:url" content="https://nuiru.net/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="トップページ" />
-    <meta property="og:description" content="ぬいるぽいんたについて一番よく記述されたサイト" />
-    <meta property="og:site_name" content="ぬいるぽいんた" />
-    <meta property="og:image" content="https://nuiru.net/header.jpg" />
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:site" content="@nuilpointer"/>
-    <meta name="Description" content="ぬいるぽいんたに関して一番よく書かれたサイト">
-    <meta name="theme-color" content="#1a237e">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" async></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js" async></script>
-    <script defer>
-      window.onload = function() {
-        document.addEventListener('DOMContentLoaded', function() {
-          var options = new Object;
-          var elems = document.querySelectorAll('.sidenav');
-          var instances = M.Sidenav.init(elems, options);
-        });
+<html>
+    <head>
+        <title>Top - ぬいるぽいんた</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="./resources/style.css"></style>
+        <meta charset="UTF-8"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@200&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+        <script type="text/javascript" src="./scripts/script.js"></script>
+        <script type="text/javascript" src="./scripts/pageIntro.js"></script>
+    </head>
+    <body>
 
-        $(document).ready(function(){
-          $('.sidenav').sidenav();
-        });
-
-        $(document).ready(function(){
-            $('.tabs').tabs();
-        });
-
-        //ここからconsole出力
-        console.log("このデバッグページを開くより https://materializecss.com/ を見た方が有益です。");
-        console.log("保存して察しのついた方、主の別ページの使いまわしのHPです\n手を抜いてはいけない(戒め)");
-
-      }
-    </script>
-    <style>
-
-      .Site {
-        color:white;
-        background-color: #292929;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-
-      }
-
-      nav{
-        position: fixed;
-        background: rgba(0, 0, 0, 0.2);
-        padding:0px 20px;
-        z-index:1;
-      }
-
-      section{
-        background-image: url(header.jpg);
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 40vh;
-      }
-
-      ul {
-         z-index:0;
-      }
-      .tabs .tab a{
-        color: #757575;
-        background-color: #212121 !important;
-      }
-      .tabs .tab a:hover {
-        background-color: #9e9e9e !important;
-        color: #000000;
-      }
-
-      .tabs .tab a:focus.active{
-        background-color: #e8eaf6;
-      }
-      .tabs .tab a.active {
-        background-color: #f5f5f5;
-        color: #ffffff;
-      }
-      .tabs .indicator {
-        background-color: #1a237e;
-      }
-      .card {
-        background-color: #292929;
-      }
-    </style>
-  </head>
-
-  <body class="Site" id="site">
-    <div id="sitemain" style="flex: 1 0 auto;">
-      <!--header読み込み-->
-      <header>
-        <nav class="">
-          <div class="navbar-fixed hide-on-med-and-down">
-            <div class="nav-wrapper">
-              <a class="h1 brand-logo" href="https://nuiru.net"><img width="200" src="res/icon.png" style="margin:10px" alt="nuilpointer"></a>
-            </div>
-          </div>
-        </nav>
-        <nav class="nav-extended hide-on-large-only grey darken-4">
-          <div class="nav-wrapper">
-            <a class="h1 brand-logo" href="https://nuiru.net"><img width="200" src="res/icon.png" style="margin:10px" alt="nuilpointer"></img></a>
-          </div>
-          <div class="nav-content">
-            <ul class="tabs tabs-transparent">
-              <li class="tab"><a class="active" href="#about" style="background-color: rgba(0, 0, 0, 0);">概要</a></li>
-              <li class="tab"><a href="#downloads">配布とか</a></li>
-              <li class="tab"><a href="#sns">SNS</a></li>
-              <li class="tab"><a href="#devices">機材とか</a></li>
-            </ul>
-          </div>
-        </nav>
-        <section>
-        </section>
-      </header>
-
-      <!--ここから内容-->
-      <main class="Site-content">
-        <div class="row">
-          <div class="col s12 hide-on-med-and-down">
-            <ul class="tabs">
-              <li class="tab col s3"><a class="active" href="#about">概要</a></li>
-              <li class="tab col s3"><a href="#downloads">配布とか</a></li>
-              <li class="tab col s3"><a href="#sns">SNS</a></li>
-              <li class="tab col s3"><a href="#devices">機材とか</a></li>
-            </ul>
-          </div>
-          <div class="container" style="padding-top: 30px;">
-            <div class="col s12" id="about">
-              <p><h1>おまえは誰だ</h1></p>
-              <p>なまえ:ぬいるぽいんた</p>
-              <p>ぬいるとでも呼んでください それ以外は気づきません</p>
-              <p>趣味:パソコンとスマホ、ゲームとプログラミング(ちょっと)、鉄道とか航空機とか風景の撮影、VTuberを見たり</p>
-              <p>最近Vしか見てない</p>
-              <p><h4>このサイトはなんだ</h4></p>
-              <p>私の自己紹介ページです</p>
-              <p>特にこれと言って重要な事柄は書いていませんが少しだけ情報があったりします</p>
-              <p><h4>SNSとか</h4></p>
-              <p><a href="https://twitter.com/nuilpointer">ツイッター</a></p>
-              <p><a href="https://youtube.com/c/nuiru">つべ</a></p>
-              <p><a href="https://discord.gg/zuytE6J">でぃすこさば</a></p>
-            </div>
-
-            <div class="col s12" id="downloads">
-              <p><h1>配布とか</h1></p>
-              <p><h5>DiscordのBot</h5></p>
-              <p><a href="https://nuiru.net/nBot/">こちらから</a></p>
-              <p>YouTubeのダウンロードとか実装しているBotです。</p>
-
-              <p><h5>GPU検出するやつ</h5></p>
-              <p><a href="https://nuiru.net/detectYourGPU/">こちらから</a></p>
-              <p>ブラウザのレンダーを表示します。GPUとかわかると思います。それだけです。</p>
-
-
-
-
-              <p><a href="steam://rungameid/359550">ここを押すと幸せになれます</a></p>
-            </div>
-
-            <div id="sns" class="col s12">
-              <p>Twitter</p>
-              <p><a href="https://twitter.com/nuilpointer?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @nuilpointer</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p><br>
-              <p>Youtube</p>
-              <a href="https://www.youtube.com/channel/UC3P2J6vu4T7q6LmLznIUgwg" class="waves-effect waves-light btn red accent-4"><i class="material-icons left">play_arrow</i>Youtube</a>
-
-            </div>
-            <div id="devices" class="col s12">
-              <p><h4>PC</h4></p>
-              <div class="row">
-                <div class="col s12 m7">
-                  <div class="card">
-                    <div class="card-content">
-                      <p>CPU:Intel Core i7-7700K @4.20GHz 4C/8T</p>
-                      <p>GPU:nVIDIA GeForce GTX 1660 6GB</p>
-                      <p>RAM:DDR4-2666 16GBx2 32GB</p>
-                      <p>SSD:WD Black M.2 NVMe SSD 1TB</p>
-                      <p>HDD:TOSHIBA 1TB 7200rpm</p>
-                    </div>
-                  </div>
+        <a href="https://nuiru.com/" id="icon" style="display: none;"><img src="./resources/icon.png" width="100"></a>
+        <div id="nav" style="display: none;">
+            <div id="aboutMeBtn" class="navBtn activeBtn">
+                <div class="btnContent">
+                    <i class="material-icons">favorite</i><br>
+                    About
                 </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m7">
-                  <div class="card">
-                    <div class="card-content">
-                      <p>CPU:Intel Core i7-4700MQ @2.40GHz 4C/8T</p>
-                      <p>GPU:Intel HD Graphics 4600</p>
-                      <p>RAM:DDR3-1600 8GBx2 16GB</p>
-                      <p>SSD:Crucial 512GB</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
+            <div id="downloadsBtn" class="navBtn">
+                <div class="btnContent">
+                    <i class="material-icons">download</i><br>
+                    Downloads
+                </div>
+            </div>
+            <div id="snsBtn" class="navBtn">
+                <div class="btnContent">
+                    <i class="material-icons">share</i><br>
+                    SNS
+                </div>
+            </div>
+            <div id="gadgetsBtn" class="navBtn">
+                <div class="btnContent">
+                    <i class="material-icons">laptop_windows</i><br>
+                    Gadgets
+                </div>
+            </div>
         </div>
-      </main>
-    </div>
-
-    <footer class="page-footer grey darken-4">
-      <div class="transparent container row s12">
-        <h5 class="white-text">外部リンク</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="https://nuiru.net">トップ</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://twitter.com/nuIlpointer">Twitter</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://www.youtube.com/c/nuilpointer">YouTube</a></li>
-            <li><a class="grey-text text-lighten-3" href="http://www.nicovideo.jp/user/45885932">niconico</a></li>
-          </ul>
+        <div class="container" id="container" style="display: none;">
+            <div class="contents" id="aboutMe">
+                <br>
+                <h1>おまえはだれだ</h1>
+                <p>なまえ:ぬいるぽいんた</p>
+                <p>呼び方:ぬいるなどなど エゴサはぬいるです</p>
+                <h2>趣味</h2>
+                <p>パソコンとスマホ、ゲームとプログラミング(ちょっと)、鉄道とか航空機とか風景の撮影、VTuberを見たり</p>
+                <p>最近Vのファンアートとかしか見てない</p>
+                <p>何故かおえかき的何かに手を出そうとして挫折したりWebページ書き直したりと最近はやることも迷走している</p>
+                <h2>このサイトについて</h2>
+                <p>私の自己紹介ページです</p>
+                <p>特にこれと言って重要な事柄は書いていませんが少しだけ情報があったりします</p>
+                <h2>ハンネの由来</h2>
+                <p>ツイッターの名前を悪ふざけで「ﾠ」にする</p>
+                <p>↓</p>
+                <p>ついでにIDを「nuIlpointer(nullpointerのIDは当然のごとく取られていたため)」に変更</p>
+                <p>↓</p>
+                <p>誰かから「ぬいるぽいんた」と呼ばれたためそのまま使う</p>
+                <p>↓</p>
+                <p>(短縮してぬいる)</p>
+                <h2>SNSとか</h2>
+                <p><a href="https://twitter.com/nuilpointer">ツイッター</a></p>
+                <p><a href="https://youtube.com/c/nuiru">つべ</a></p>
+                <p><a href="https://discord.gg/zuytE6J">でぃすこさば</a></p>
+                <p><a href="https://misskey.io/@nu">Misskey</a></p>
+                <br>
+            </div>
+            <div class="contents" id="downloads" style="display: none;">
+                <br>
+                <h1>配布とか</h1>
+                <h2>つべのダウンローダ</h2>
+                <p>Web v3(β版):<a href="https://nuiru.com/nuiloader">こちらから</a></p>
+                <p>Web v2(安定版):<a href="https://nuiru.com/downloader">こちらから</a></p>
+                <p>ダウンロード版 v3(β版):<a href="https://iccha.uno/nuiloader-3.0.0-beta3-win.zip">こちらから</a></p>
+                <p>MP4/MP3ダウンローダ。youtube-dlとかffmpegとか使ってます。</p>
+                <p>MP3で落とすと地味にサムネイルとタグの自動生成をしてくれます。</p>
+                <br>
+                <h2>Snowflakeのコンバータ</h2>
+                <p>Webページ:<a href="https://nuiru.com/snowflake-converter/">こちらから</a></p>
+                <p>Twitter/DiscordのSnowflakeを時刻に変換します。</p>
+                <br>
+                <h2>DiscordのBot</h2>
+                <p>Webページ:<a href="https://nuiru.com/nBot/">こちらから</a></p>
+                <p>YouTubeのダウンロードとか実装しているBotです。</p>
+                <br>
+                <h2>GPU検出するやつ</h2>
+                <p>Webページ:<a href="https://nuiru.com/detectYourGPU/">こちらから</a></p>
+                <p>ブラウザのレンダーを表示します。GPUとかわかると思います。それだけです。</p>
+                <br>
+                <h2>Amazonのアフィリン回避するやつ</h2>
+                <p>Chrome拡張:<a href="https://nuiru.com/downloads/amazon-affiliate-blocker.zip" class="no-preview">こちらから</a></p>
+                <p>アフィリンだったら勝手にタグ外したページに遷移してくれるだけのChrome拡張です。拡張機能の管理→デベロッパーモードをオンにしてパッケージ化されていない拡張機能を読み込む で読めると思います</p>
+                <br>
+                <h2>なうぶらもどき</h2>
+                <p>Chrome拡張:<a href="https://iccha.uno/now-browsing.7z" class="no-preview">こちらから</a></p>
+                <p>使ってたなうぶら拡張が死んだのでとりあえず適当に書いたやつです intent/tweetのリンクを使っています</p>
+                <p>導入方法は上と同じです</p>
+                <br>
+            </div>
+            <div class="contents" id="sns" style="display: none;">
+                <br>
+                <h1>SNS</h1>
+                <h2>Twitter</h2>
+                <p><a href="https://twitter.com/nuilpointer" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @nuilpointer</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p><br>
+                <p><a href="https://twitter.com/nuirupointa" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @nuirupointa</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p><br>
+                <p><a href="https://twitter.com/nuildrawer" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @nuildrawer</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p><br>
+                <h2>Youtube</h2>
+                <a href="https://www.youtube.com/c/nuiru">ぬいる</a>
+                <h2>MissKey</h2>
+                <a href="https://misskey.io/@nu">@nu</a><br>
+                <a href="https://misskey.yukineko.me/@n">@n</a>
+                <br>
+            </div>
+            <div class="contents" id="gadgets" style="display: none;">
+                <br>
+                <h1>機材などなど</h1>
+                <div class="objectBox">
+                    <h2>メインPC</h2>
+                    <div class="objectInner">
+                        <p>CPU: Ryzen 7 1800X Eight-Core Processor @3.60GHz 8C/16T</p>
+                        <p>GPU: NVIDIA GeForce GTX 1660 6GB</p>
+                        <p>RAM: DDR4-2133 16GB</p>
+                        <p>SSD: WD Black SN700 NVMe SSD 1TB</p>
+                        <p>HDD: TOSHIBA MQ04ABF100 1TB</p>
+                    </div>
+                </div>
+                <div class="objectBox">
+                    <h2>メインノート</h2>
+                    <div class="objectInner">
+                        <p>CPU: Intel Core i7-4700MQ @2.40GHz 4C/8T</p>
+                        <p>GPU: Intel HD Graphics 4600</p>
+                        <p>RAM: DDR3-1600 16GB</p>
+                        <p>SSD: Crucial M550 mSATA SSD 512GB</p>
+                    </div>
+                </div>
+                <div class="objectBox">
+                    <h2>メインサーバー</h2>
+                    <div class="objectInner">
+                        <p>CPU: Intel Core i7-7700K @4.20GHz 4C/8T</p>
+                        <p>GPU: Intel HD Graphics 620</p>
+                        <p>RAM: DDR4-2133 16GB</p>
+                        <p>SSD: Phison NVMe SSD 512GB</p>
+                    </div>
+                </div>
+                <div class="objectBox">
+                    <h2>フロントサーバー</h2>
+                    <div class="objectInner">
+                        <p>CPU: Intel Core i5-650 @3.20GHz 2C/4T</p>
+                        <p>GPU: Radeon HD 7570 1GB</p>
+                        <p>RAM: DDR3-1333 12GB</p>
+                        <p>HDD: Seagate 320GB HDD</p>
+                    </div>
+                </div>
+                <br>
+                <h2>周辺機器</h2>
+                <div class="objectBox">
+                    <h2>メイン</h2>
+                    <div class="objectInner">
+                        <p>Keyboard: Razer Blackwidow Ultimate 2016 Stealth</p>
+                        <p>Mouse: Logicool G302</p>
+                        <p>Monitor: NEC MultiSync PA231W</p>
+                        <p>PenTablet: XP-Pen STAR-06C</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
         </div>
-      <div class="footer-copyright">
-        <div class="container">
-          <a class="white-text right" href="https://materializecss.com"><u>Powered by Materialize CSS.</u></a>
-        </div>
-      </div>
-    </footer>
-
-  </body>
+        
+    </body>
 </html>

@@ -1,0 +1,86 @@
+
+body {
+    background: #202020;
+    color: #fff;
+    font-family: YuGothic,'Yu Gothic','Yu Gothic UI','ヒラギノ角ゴシック','Hiragino Sans','Meiryo UI',sans-serif;
+    margin:0px;
+    width: 100%;
+}
+p {
+    margin-bottom: 0px;
+}
+#icon {
+    position:fixed;
+    margin-top: 10px;
+    margin-left:10px;
+}
+.container {
+    top: 0;
+    background: #252525;
+    margin:0px;
+    margin-left: 120px;
+    min-height: 100%;
+    width: calc(100% - 120px);
+}
+
+.contents {
+    margin-left:20px;
+}
+
+.objectBox {
+    background-color: #202020;
+    margin: 10px;
+    border-radius: 10px;
+}
+.objectInner {
+    margin: 10px;
+}
+#nav {
+    position:fixed;
+    top: 50vh;
+    left: 60px;
+    transform: translateY(-50%) translateX(-50%);
+    background: #181818;
+    border-radius: 4px;
+    font-size: 12px;
+    width:80px;
+    color: #999;
+}
+
+.navBtn {
+    height: 80px;
+    width: 80px;
+    text-align:center;
+    user-select: none;
+}
+
+.btnContent {
+    height: 60px;
+    transform: translateY(30%);
+}
+
+.activeBtn {
+    filter: brightness(1.8);
+}
+a:link {
+    color: lightblue;
+}
+
+a:visited {
+    color: gray;
+}
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 6px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, .3);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(85, 85, 85, 0.5);
+    box-shadow:-2px -2px -2px -2px rgba(255, 255, 255, .3);
+}
+
